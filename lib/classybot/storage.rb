@@ -1,5 +1,4 @@
 module ClassyBot
-  require 'yaml'
   require 'sequel'
 
   # Deals with classybot's secret hidden memory source.
