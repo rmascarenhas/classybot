@@ -41,3 +41,19 @@ namespace :db do
   task :populate => [:joke, :followers, :fortunes] {}
 
 end
+
+
+desc 'Checks for new followers, sending a welcome message'
+task :check_new_followers do
+  require_relative 'cron/check_new_followers'
+end
+
+desc 'Tweets a bit'
+task :talk do
+  require_relative 'cron/talk'
+end
+
+desc 'Is it Friday yet?'
+task :tgif do
+  require_relative 'cron/tgif'
+end
