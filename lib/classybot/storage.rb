@@ -13,15 +13,7 @@ module ClassyBot
   private
 
     def self.connection_url
-      options = YAML.load_file(ClassyBot.root + '/classybot_config.yml')['classybot']
-
-      adapter   = options['adapter']                               || DEFAULTS[:adapter]
-      username  = options['username']                              || DEFAULTS[:username]
-      password  = options['password'] ? (':' + options[:password])  : DEFAULTS[:password]
-      host      = options['host']                                  || DEFAULTS[:host]
-      database  = options['database']                              || DEFAULTS[:database]
-
-      "#{adapter}://#{username}#{password}@#{host}/#{database}"
+      ENV['DATABASE_URL']
     end
   end
 end

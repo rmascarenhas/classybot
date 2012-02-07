@@ -1,4 +1,5 @@
 twitter_setup.sh
+local_db_setup.sh
 .rvmrc
 *~
 .*.swp

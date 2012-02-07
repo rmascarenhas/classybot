@@ -1,6 +1,0 @@
-classybot:
-    adapter: "postgres"
-    username: "classybot"
-    password:
-    host: "localhost"
-    database: "classydb"
